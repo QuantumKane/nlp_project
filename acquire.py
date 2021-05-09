@@ -167,7 +167,6 @@ REPOS = [
     'omarsar/nlp_highlights',
     'SaiGonSoftware/Awesome-CMS-Core',
     'mohamed-taman/Springy-Store-Microservices',
-    'macosforge/dss',
     'CollaboraOnline/online',
     'yomorun/yomo',
     'hanuor/onyx',
@@ -268,7 +267,6 @@ REPOS = [
     'frontlinesms/frontlinesms2',
     'DevForThaiFreedom/devforthaifreedom',
     'creati8e/Finances',
-    'devlinkcn/careTechnologyPartner',
     'Minecodecraft/ARDoor',
     'rcjsuen/dockerfile-language-server-nodejs',
     'shreyashankar/datasets-for-good',
@@ -308,7 +306,6 @@ REPOS = [
     'PyDataBlog/Python-for-Data-Science',
     'kimble/dropwizard-dashboard',
     'google/apis-client-generator',
-    'bigtreetech/BIGTREETECH-TFT35-V3.0',
     'MicrosoftLearning/20486-DevelopingASPNETMVCWebApplications',
     'TGmeetup/TWcommunities',
     'tcnksm/awesome-container',
@@ -341,7 +338,6 @@ REPOS = [
     'newsdev/about-int',
     'FaztTech/nodejs-mysql-links',
     'Srinivasa314/alcro',
-    'bigtreetech/BTT-TFT35-E3-V3.0',
     'AdaCore/spark2014',
     'googlevr/seurat-unity-plugin',
     'adamrocker/Miracast-Sample',
@@ -401,7 +397,6 @@ REPOS = [
     'Tillman32/CleanArchitecture',
     'jennschiffer/SimpleSlides',
     'ravisuhag/shelf',
-    'neosmart/CppSQLite',
     'unicodeveloper/tech-hubs',
     'dgwozdz/HN_SO_analysis',
     'Ableton/LinkKit',
@@ -449,7 +444,8 @@ def github_api_request(url: str) -> Union[List, Dict]:
     if response.status_code != 200:
         raise Exception(
             f"Error response from github api! status code: {response.status_code}, "
-            f"response: {json.dumps(response_data)}"
+            f"response: {json.dumps(response_data)},"
+            f" url: {url}"
         )
     return response_data
 
