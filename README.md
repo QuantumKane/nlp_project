@@ -37,14 +37,20 @@ The variables are the following:
 
 ## Prep: 
 ### After prepping my data, I dropped from an initial 407 observatins to 293 observations
-- I dropped 'Unnamed: 0' as it was redundant
 - I dropped my null values: 70 in 'language" and 4 in 'readme_contents'
-- I dropped any language that had less than 5 occurances
+- I dropped any language that had less than 10 occurances
+- I used my prepare.py to clean, tokenize, and lemmatize the 'readme_contents' column
+- My prepare.py created new columns: "clean_lemmatized" and "clean_clean_lemmatized"
 
-## Explore: compare/contrast the languages
+## Explore:
+- Created a dictionary to hold subsets by language
+- Identified and dropped many "noise words": words that either appeasred in too many READMEs or were too generic to be helpful
+- I made bigrams to compare the top languages
 
 
-
-
-
-## Modeling: establish baseline, use classification models to predict the language
+## Modeling:
+- I split my data
+- I then vectorized my data so that I could use classification models
+- I established a baseline of 31% - the mode value
+- I ran a Linear Regression model and a Decision Tree model
+- I then decided to oversample my data using SMOTE
