@@ -44,13 +44,19 @@ The variables are the following:
 
 ## Explore:
 - Created a dictionary to hold subsets by language
-- Identified and dropped many "noise words": words that either appeasred in too many READMEs or were too generic to be helpful
+- Identified and dropped many "noise words": words that either appeared in too many READMEs or were too generic to be helpful
 - I made bigrams to compare the top languages
-
 
 ## Modeling:
 - I split my data
 - I then vectorized my data so that I could use classification models
 - I established a baseline of 31% - the mode value
 - I ran a Linear Regression model and a Decision Tree model
-- I then decided to oversample my data using SMOTE
+- I decided to oversample my data using SMOTE
+- I decided to reduce my data to the top 5 languages
+
+## Conclusion and Next Steps:
+- Because the initial baseline was so low, even a weak-performing model could beat it
+- Each model was overfit
+- As small training datasets are prone to over-fitting, I'd get a larger dataset to sample
+- I'd like to work with SMOTE more and get the hang of it
